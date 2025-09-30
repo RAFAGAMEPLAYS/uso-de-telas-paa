@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questionário</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header id="inicio">
+        <div class="logo">
+            <h1>DT</h1>
+            <h2>Detox Digital</h2>
+        </div>
+        <nav class="nav-bar">
+            <a  href="index.html">Início</a>
+            <a style="border-bottom:2px solid #7181cb" href="questionario.html">Questionário</a>
+            <a href="impactos.html">Impactos</a>
+            <a href="sugestoes.html">Sugestões</a>
+            <a href="estudoebemestar.html">Estudo & Bem-estar</a>
+        </nav>
+        <div class="menu-toggle" onclick="document.querySelector('.nav-bar').classList.toggle('show')">
+  <span></span>
+  <span></span>
+  <span></span>
+</div>
+    </header>
+    <main class="quest">
+        
+        <h1><img  style="width: 50px;  " src="img/contact-form.png" alt=""> <span >Descubra seu <span style="color: #7181cb;">Equilíbrio Digital</span></span> </h1>
+        <p>Responda às perguntas abaixo para entender melhor como você usa as telas no dia a dia e descubra dicas para melhorar seu equilíbrio digital</p>
+    </main>
+    <section class="formulario">
+    <form id="formulario">
+        <div class="pergunta">
+            <label>1. Você utiliza algum aplicativo para controlar o tempo de tela?</label>
+            <input type="radio" name="controle" value="sim">sim
+            <input type="radio" name="controle" value="nao">nao
+        </div>
+        <div class="pergunta">
+            <label>2. Quais telas você utiliza diariamente?</label>
+           <input type="checkbox" name="tela" value="celular">Celular <br>
+           <input type="checkbox" name="tela" value="pc"> Computador <br>
+            <input type="checkbox" name="tela" value="tv"> TV <br>
+            <input type="checkbox" name="tela" value="tablet"> Tablet
+        </div>
+         <div class="pergunta">
+           <label>3. Quanto tempo em média você passa em telas por dia?</label>
+           <select name="tempo">
+            <option value="" >Selecione...</option>
+             <option value="menos2">Menos de 2h</option>
+             <option value="2a4">2 a 4h</option>
+             <option value="4a6">4 a 6h</option>
+             <option value="mais6">Mais de 6h</option>
+           </select>
+        </div>
+          <div style="margin-bottom: 60px;" class="pergunta">
+          <label>4. O uso de telas já afetou seu sono ou concentração?</label>
+          <input type="radio" name="impacto" value="sim">sim
+           <input type="radio" name="impacto" value="nao"> Não
+          
+        </div>
+        <button type="submit">Enviar Respostas</button>
+    </form>
+    </section>
+     <section class="resumo">
+        <h2 id="saiba" style="text-align: center; margin-top: 5%; margin-bottom: 30px;"><span style="color: #7181cb;">Curiosidade</span></h2>
+        <p style="margin: auto auto;">No Brasil, muitos adolescentes passam mais de 7 horas por dia conectados fora do ambiente escolar, seja em redes sociais, jogos, vídeos ou aplicativos de mensagens. Esse tempo excessivo diante das telas pode impactar diversos aspectos da vida, como a qualidade do sono, a concentração nos estudos e até o bem-estar emocional. Por outro lado, a tecnologia também oferece oportunidades de aprendizado, comunicação e entretenimento.</p>
+     
+        
+    </section>
+    <section class="frase">
+        <h2>''Cada resposta ajuda você a <span style="color: #7181cb;">refletir</span>  sobre seus hábitos digitais.''</h2>
+        <a href="impactos.html">ir para impactos</a>
+    </section>
+      <footer style="margin-top: 150px;">
+        <div class="redes">
+        <a href="#">
+            <img style="width: 30px;" src="img/twitter.png" alt="">
+        </a>
+        <a href="#">
+            <img style="width: 30px;" src="img/tik-tok.png" alt="">
+        </a>
+        <a href="#">
+            <img style="width: 30px;" src="img/instagram.png" alt="">
+        </a>
+        </div>
+        <div class="mapa">
+            <a href="#inicio">Início</a>
+            <a href="#">Questionário</a>
+            <a href="#">Impactos</a>
+            <a href="#">Sugestões</a>
+            <a href="#">Estudo & Bem-estar</a>
+        </div>
+        <p style="color: white;">©Detox Digital.Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>
