@@ -1,11 +1,95 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Questionário</title>
-    <link rel="stylesheet" href="css/style.css">
+    <title>Questionário Detox Digital</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <style>
+        /* não sabia onde colocar o css, então coloquei aqui mesmo */
+        /* e sim tive que refazer o form pq tava bugando o negocio do emailjs  */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ffffff;
+            margin: 0;
+            padding: 0;
+        }
+
+        main.quest {
+            max-width: 600px;
+            margin: 50px auto;
+            background-color: #7f95f52f;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        main.quest:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        h1 {
+            text-align: center;
+            color: #7181cb;
+        }
+
+        form div {
+            margin-bottom: 20px;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input[type="email"],
+        select {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border-radius: 20px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+
+        input[type="email"]:focus,
+        select:focus {
+            border-color: #7181cb;
+            outline: none;
+            box-shadow: 0 0 5px rgba(113, 129, 203, 0.5);
+        }
+
+        input[type="radio"],
+        input[type="checkbox"] {
+            margin-right: 5px;
+            margin-left: 10px;
+        }
+
+        input[type="radio"]:hover,
+        input[type="checkbox"]:hover {
+            transform: scale(1.1);
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            background-color: #7181cb;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #5a67a1;
+        }
+    </style>
 </head>
+
 <body>
     <header id="inicio">
         <div class="logo">
@@ -13,77 +97,81 @@
             <h2>Detox Digital</h2>
         </div>
         <nav class="nav-bar">
-            <a  href="index.html">Início</a>
-            <a style="border-bottom:2px solid #7181cb" href="questionario.html">Questionário</a>
+            <a href="index.html">Início</a>
+            <a href="questionario.html">Questionário</a>
             <a href="impactos.html">Impactos</a>
             <a href="sugestoes.html">Sugestões</a>
             <a href="estudoebemestar.html">Estudo & Bem-estar</a>
         </nav>
         <div class="menu-toggle" onclick="document.querySelector('.nav-bar').classList.toggle('show')">
-  <span></span>
-  <span></span>
-  <span></span>
-</div>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
     </header>
+
     <main class="quest">
-        
-        <h1><img  style="width: 50px;  " src="img/contact-form.png" alt=""> <span >Descubra seu <span style="color: #7181cb;">Equilíbrio Digital</span></span> </h1>
-        <p>Responda às perguntas abaixo para entender melhor como você usa as telas no dia a dia e descubra dicas para melhorar seu equilíbrio digital</p>
+        <h1>Questionário Detox Digital</h1>
+        <form id="formulario">
+            <div>
+                <label for="email">Digite seu e-mail:</label><br>
+                <input type="email" name="email" id="email" placeholder="example@email.com" required>
+            </div>
+
+            <div>
+                <label>1. Com que frequência você sente que perde a noção do tempo ao usar o celular ou
+                    computador?</label><br>
+                <input type="radio" name="tempoPerdido" value="Sempre"> Sempre
+                <input type="radio" name="tempoPerdido" value="Frequentemente"> Frequentemente
+                <input type="radio" name="tempoPerdido" value="Raramente"> Raramente
+                <input type="radio" name="tempoPerdido" value="Nunca"> Nunca
+            </div>
+
+            <div>
+                <label>2. Qual dispositivo você mais usa diariamente?</label><br>
+                <input type="radio" name="dispositivo" value="Celular"> Celular
+                <input type="radio" name="dispositivo" value="Computador"> Computador
+                <input type="radio" name="dispositivo" value="Tablet"> Tablet
+                <input type="radio" name="dispositivo" value="TV"> TV
+            </div>
+
+            <div>
+                <label>3. Você já tentou reduzir o tempo de tela por conta própria?</label><br>
+                <input type="radio" name="tentativaReducao" value="Sim, com sucesso"> Sim, com sucesso
+                <input type="radio" name="tentativaReducao" value="Sim, mas não consegui"> Sim, mas não consegui
+                <input type="radio" name="tentativaReducao" value="Não tentei"> Não tentei
+            </div>
+
+            <div>
+                <label>4. Qual é o principal motivo para usar telas diariamente?</label><br>
+                <input type="checkbox" name="motivo" value="Trabalho/Estudos"> Trabalho/Estudos
+                <input type="checkbox" name="motivo" value="Entretenimento"> Entretenimento
+                <input type="checkbox" name="motivo" value="Redes Sociais"> Redes Sociais
+                <input type="checkbox" name="motivo" value="Comunicação"> Comunicação
+            </div>
+
+            <div>
+                <label>5. Você sente que o uso de telas afeta seu humor ou concentração?</label><br>
+                <input type="radio" name="impactoHumor" value="Sempre"> Sempre
+                <input type="radio" name="impactoHumor" value="Às vezes"> Às vezes
+                <input type="radio" name="impactoHumor" value="Raramente"> Raramente
+                <input type="radio" name="impactoHumor" value="Nunca"> Nunca
+            </div>
+
+            <button type="submit">Enviar</button>
+        </form>
     </main>
-    <section class="formulario">
-    <form id="formulario">
-        <div class="pergunta">
-            <label>1. Você utiliza algum aplicativo para controlar o tempo de tela?</label>
-            <input type="radio" name="controle" value="sim">sim
-            <input type="radio" name="controle" value="nao">nao
-        </div>
-        <div class="pergunta">
-            <label>2. Quais telas você utiliza diariamente?</label>
-           <input type="checkbox" name="tela" value="celular">Celular <br>
-           <input type="checkbox" name="tela" value="pc"> Computador <br>
-            <input type="checkbox" name="tela" value="tv"> TV <br>
-            <input type="checkbox" name="tela" value="tablet"> Tablet
-        </div>
-         <div class="pergunta">
-           <label>3. Quanto tempo em média você passa em telas por dia?</label>
-           <select name="tempo">
-            <option value="" >Selecione...</option>
-             <option value="menos2">Menos de 2h</option>
-             <option value="2a4">2 a 4h</option>
-             <option value="4a6">4 a 6h</option>
-             <option value="mais6">Mais de 6h</option>
-           </select>
-        </div>
-          <div style="margin-bottom: 60px;" class="pergunta">
-          <label>4. O uso de telas já afetou seu sono ou concentração?</label>
-          <input type="radio" name="impacto" value="sim">sim
-           <input type="radio" name="impacto" value="nao"> Não
-          
-        </div>
-        <button type="submit">Enviar Respostas</button>
-    </form>
-    </section>
-     <section class="resumo">
-        <h2 id="saiba" style="text-align: center; margin-top: 5%; margin-bottom: 30px;"><span style="color: #7181cb;">Curiosidade</span></h2>
-        <p style="margin: auto auto;">No Brasil, muitos adolescentes passam mais de 7 horas por dia conectados fora do ambiente escolar, seja em redes sociais, jogos, vídeos ou aplicativos de mensagens. Esse tempo excessivo diante das telas pode impactar diversos aspectos da vida, como a qualidade do sono, a concentração nos estudos e até o bem-estar emocional. Por outro lado, a tecnologia também oferece oportunidades de aprendizado, comunicação e entretenimento.</p>
-     
-        
-    </section>
-    <section class="frase">
-        <h2>''Cada resposta ajuda você a <span style="color: #7181cb;">refletir</span>  sobre seus hábitos digitais.''</h2>
-        <a href="impactos.html">ir para impactos</a>
-    </section>
-      <footer style="margin-top: 150px;">
+    <footer style="margin-top: 150px;">
         <div class="redes">
-        <a href="#">
-            <img style="width: 30px;" src="img/twitter.png" alt="">
-        </a>
-        <a href="#">
-            <img style="width: 30px;" src="img/tik-tok.png" alt="">
-        </a>
-        <a href="#">
-            <img style="width: 30px;" src="img/instagram.png" alt="">
-        </a>
+            <a href="#">
+                <img style="width: 30px;" src="img/twitter.png" alt="">
+            </a>
+            <a href="#">
+                <img style="width: 30px;" src="img/tik-tok.png" alt="">
+            </a>
+            <a href="https://www.instagram.com/detoxdigital.ifc/" target="_blank">
+                <img style="width: 30px;" src="img/instagram.png" alt="">
+            </a>
         </div>
         <div class="mapa">
             <a href="#inicio">Início</a>
@@ -94,5 +182,53 @@
         </div>
         <p style="color: white;">©Detox Digital.Todos os direitos reservados.</p>
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <script>
+        emailjs.init("w6pNQGSkI0EqmF__J");
+        const form = document.getElementById('formulario');
+        form.addEventListener('submit', function (event) {
+            event.preventDefault();
+            const email = document.getElementById('email').value;
+            const tempoPerdido = form.querySelector('input[name="tempoPerdido"]:checked')?.value || '';
+            const dispositivo = form.querySelector('input[name="dispositivo"]:checked')?.value || '';
+            const tentativaReducao = form.querySelector('input[name="tentativaReducao"]:checked')?.value || '';
+            const impactoHumor = form.querySelector('input[name="impactoHumor"]:checked')?.value || '';
+            const motivosSelecionados = Array.from(form.querySelectorAll('input[name="motivo"]:checked'))
+                .map(el => el.value)
+                .join(', ');
+            let dica = "";
+            if (tempoPerdido === "Sempre") dica += "Tente usar o celular com horários definidos e alertas de pausa. ";
+            else if (tempoPerdido === "Frequentemente") dica += "Reserve momentos do dia para se desconectar das telas. ";
+            else if (tempoPerdido === "Raramente") dica += "Continue mantendo seu tempo de tela equilibrado. ";
+            else if (tempoPerdido === "Nunca") dica += "Parabéns! Você tem bom controle do seu tempo digital. ";
+            if (dispositivo === "Celular") dica += "Reduza notificações e use aplicativos de monitoramento de tempo de tela. ";
+            else if (dispositivo === "Computador") dica += "Faça pausas regulares para alongar e descansar os olhos. ";
+            else if (dispositivo === "Tablet") dica += "Limite sessões longas e intercale com atividades offline. ";
+            else if (dispositivo === "TV") dica += "Tente alternar o tempo de TV com exercícios físicos ou leitura. ";
+            if (impactoHumor === "Sempre") dica += "Experimente atividades offline como leitura, caminhada ou meditação.";
+            else if (impactoHumor === "Às vezes") dica += "Tente alternar períodos de tela com pequenas pausas para relaxar.";
+            else if (impactoHumor === "Raramente") dica += "Continue mantendo momentos de desconexão digital.";
+            else if (impactoHumor === "Nunca") dica += "Excelente! Seu uso de telas não está prejudicando seu bem-estar.";
+            emailjs.send('service_usi3m6k', 'template_vnhxc4c', {
+                email: email,
+                tempoPerdido: tempoPerdido,
+                dispositivo: dispositivo,
+                tentativaReducao: tentativaReducao,
+                motivo: motivosSelecionados,
+                impactoHumor: impactoHumor,
+                dica: dica
+            })
+                .then(() => {
+                    alert("Formulário enviado com sucesso!");
+                    form.reset();
+                }, (err) => {
+                    console.error(err);
+                    alert("Houve um erro ao enviar o formulário.");
+                });
+        });
+    </script>
+
 </body>
+
 </html>
