@@ -5,20 +5,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>uso de tela</title>
     <link rel="stylesheet" href="css/style.css">
+    <script src="https://kit.fontawesome.com/4410d9698c.js" crossorigin="anonymous"></script>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 </head>
 <body>
     <header id="inicio">
-        <div class="logo">
-            <h1>DT</h1>
-            <h2>Detox Digital</h2>
-        </div>
         <nav class="nav-bar">
-            <a style=" border-bottom:2px solid #7181cb;"  href="index.html">Início</a>
-            <a href="questionario.html">Questionário</a>
-            <a href="impactos.html">Impactos</a>
-            <a href="sugestoes.html">Sugestões</a>
-            <a href="estudoebemestar.html">Estudo & Bem-estar</a>
+            <div class="logo">
+                <a href="index.html">Detox Digital</i></a>
+            </div>
+            <div>
+                <ul class="navegacao">
+                    <li>
+                        <a href="index.html">Início</a>
+                    </li>
+                    <li>
+                        <a href="#">Bem-Estar <i class="fa-solid fa-chevron-down" style="color: #7181cb;" class="arrow"></i></a>
+
+                        <ul>
+                            <li><a href="">Sono</a></li>
+                            <li><a href="">Saúde mental</a></li>
+                            <li><a href="">Produtividade</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="/html/subpages/tools/advicePage.html">Uso Consciente <i class="fa-solid fa-chevron-down" style="color: #7181cb;" class="arrow"></i></a>
+                        <ul>
+                            <li><a href="/html/subpages/tools/advicePage.html">Limite de tempo</a></li>
+                            <li><a href="/html/subpages/tools/menuPage.html">Pausas</a></li>
+                            <li><a href="/html/subpages/tools/assessmentPage.html">Telas a noite</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="/html/subpages/tools/advicePage.html"> Teste e Dicas <i class="fa-solid fa-chevron-down" style="color: #7181cb;" class="arrow"></i></a>
+                        <ul>
+                            <li><a href="/html/subpages/tools/advicePage.html">Questionário</a></li>
+                            <li><a href="/html/subpages/tools/menuPage.html">Dicas</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="/html/staticpages/aboutPage.html">Sobre</a>
+                        
+                    </li>
+                </ul>
+            </div>
         </nav>
+
         <div class="menu-toggle" onclick="document.querySelector('.nav-bar').classList.toggle('show')">
   <span></span>
   <span></span>
@@ -147,7 +179,7 @@
     
       <section class="frase">
         <h2 style="border: none;">''faça um   <span style="color: #7181cb;">   teste</span> para ver sua saude digital!  ''</h2>
-        <a href="questionario.html">ir para questionario</a>
+        <a href="questionario.html">Fazer Teste </a>
     </section>
     <footer style="margin-top: 150px;">
         <div class="redes">
