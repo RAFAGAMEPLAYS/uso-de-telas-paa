@@ -528,6 +528,7 @@ button:hover {
 .menu-toggle {
   display: none;
   flex-direction: column;
+  
   cursor: pointer;
   gap: 5px;
 }
